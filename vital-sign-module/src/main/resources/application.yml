@@ -1,0 +1,26 @@
+logging:
+    file:
+        name: D:/Downloads/ELK/logs/vital-sign-module.log
+management:
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+server:
+    port: 8002
+spring:
+    application:
+        name: Vital-Sign-Module
+    datasource:
+        hikari:
+            connectionTimeout: 30000
+            idelTimeout: 30000
+            leak-detection-threshold: 2100
+            maxLifetime: 2000000
+            maximumPoolSize: 20
+            minimumIdle: 5
+            poolName: SpringBootJPAHikariCP
+    cloud:
+        consul:
+            host: localhost
+            port: 6060
